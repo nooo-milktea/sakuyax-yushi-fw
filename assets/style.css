@@ -46,14 +46,14 @@ body::after{
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:96px 20px 60px;overflow:hidden}
 .hero .split{position:absolute;inset:0;z-index:0}
 .hero .split i{position:absolute;inset:0}
-.hero .split .l{background:linear-gradient(160deg,#ffd3e2 0%,#ffb0cd 45%,#ff96bd 100%);clip-path:polygon(0 0,56% 0,44% 100%,0 100%)}
+.hero .split .l{background:linear-gradient(160deg,#ffd9e6 0%,#ffb3cf 45%,#ff94bd 100%);clip-path:polygon(0 0,58% 0,42% 100%,0 100%);z-index:2}
 .hero .split .r{background:linear-gradient(200deg,#d6ecff 0%,#a9d5ff 45%,#8ac1f7 100%)}
-.hero .grain{position:absolute;inset:0;z-index:1;opacity:.5;
+.hero .grain{position:absolute;inset:0;z-index:3;opacity:.5;
   background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.7),transparent 45%),radial-gradient(circle at 82% 70%,rgba(255,255,255,.6),transparent 40%)}
-.hero .inner{position:relative;z-index:3;text-align:center;width:min(1080px,100%)}
+.hero .inner{position:relative;z-index:5;text-align:center;width:min(1080px,100%)}
 .kicker{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#5c5750}
 .title{
-  font-size:clamp(46px,11vw,132px);line-height:.92;font-weight:900;letter-spacing:-.02em;margin:16px 0 12px;
+  font-size:clamp(38px,9.5vw,120px);white-space:nowrap;line-height:.92;font-weight:900;letter-spacing:-.02em;margin:16px 0 12px;
 }
 .title .x{color:#fff;text-shadow:0 6px 24px rgba(0,0,0,.14);display:inline-block;transform:translateY(-.06em)}
 .title .sp{color:var(--pink-d)}
@@ -70,7 +70,7 @@ body::after{
 .tcard .cap{display:flex;justify-content:space-between;font-size:10.5px;letter-spacing:.08em;color:#77726b;margin-top:8px}
 .tcard .nm{font-weight:800;font-size:12px;color:#222}
 
-.mascots{position:absolute;inset:0;z-index:2;pointer-events:none}
+.mascots{position:absolute;inset:0;z-index:4;pointer-events:none}
 .mascots .m{position:absolute;animation:float 7s ease-in-out infinite}
 .mascots .m1{left:6%;top:26%;animation-delay:-1s}
 .mascots .m2{right:7%;top:20%;animation-delay:-3s}
