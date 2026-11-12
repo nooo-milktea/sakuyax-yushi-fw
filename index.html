@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAKUYA × YUSHI — Universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="scene">
+  <div class="sky"><div class="pixels"></div>
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  </div>
+  <div class="hill"></div>
+  <div class="sphere big"></div>
+  <div class="sphere small"></div>
+  <div class="sphere tiny"></div>
+</div>
+
+<div class="topbar">
+  <div class="brand">SAKUYA × YUSHI UNIVERSE</div>
+  <button class="back" onclick="closeAll()">返回</button>
+</div>
+
+<!-- 桌面图标 -->
+<div class="icons">
+  <button class="icon" onclick="openWin('w-album')">
+    <span class="gfx">📁</span>
+    <span><span class="lbl">咲哉的相册</span><br><span class="tag">OPEN</span></span>
+  </button>
+  <button class="icon" onclick="openWin('w-film')">
+    <span class="gfx a">🎞</span>
+    <span><span class="lbl">勇志的胶片</span><br><span class="tag">OPEN</span></span>
+  </button>
+  <button class="icon" onclick="openWin('w-chat')">
+    <span class="gfx b">💬</span>
+    <span><span class="lbl">两个人的对话</span><br><span class="tag">OPEN</span></span>
+  </button>
+  <button class="icon" onclick="openWin('w-map')">
+    <span class="gfx c">🌍</span>
+    <span><span class="lbl">记忆地图</span><br><span class="tag">OPEN</span></span>
+  </button>
+  <button class="icon" onclick="openWin('w-memo')">
+    <span class="gfx d">📝</span>
+    <span><span class="lbl">留言板</span><br><span class="tag">OPEN</span></span>
+  </button>
+</div>
+
+<!-- 相册 -->
+<div class="win" id="w-album" style="left:120px;top:120px">
+  <div class="bar" data-drag><span class="sp"></span><b>咲哉的相册 — 32 张</b><button class="x" onclick="closeWin('w-album')">✕</button></div>
+  <div class="body">
+    <div class="ph">
+      <img src="assets/img/s01.jpg" alt="">
+      <img src="assets/img/s03.jpg" alt="">
+      <img src="assets/img/s05.jpg" alt="">
+      <img src="assets/img/s09.jpg" alt="">
+      <img src="assets/img/s15.jpg" alt="">
+      <img src="assets/img/s16.jpg" alt="">
+    </div>
+    <div class="meta"><span>胶片 · 数码 · 混合</span><span>2025 — 2026</span></div>
+  </div>
+</div>
+
+<!-- 胶片 -->
+<div class="win" id="w-film" style="left:180px;top:160px">
+  <div class="bar" data-drag><span class="sp"></span><b>勇志的胶片 — 第 36 卷</b><button class="x" onclick="closeWin('w-film')">✕</button></div>
+  <div class="body">
+    <div class="strip">
+      <figure><img src="assets/img/m01.jpg" alt=""><figcaption>01 / 樱</figcaption></figure>
+      <figure><img src="assets/img/m03.jpg" alt=""><figcaption>02 / 河</figcaption></figure>
+      <figure><img src="assets/img/m07.jpg" alt=""><figcaption>03 / 海</figcaption></figure>
+      <figure><img src="assets/img/m10.jpg" alt=""><figcaption>04 / 泉</figcaption></figure>
+      <figure><img src="assets/img/s02.jpg" alt=""><figcaption>05 / 他</figcaption></figure>
+    </div>
+    <div class="meta"><span>ISO 400 · 35mm</span><span>还剩 31 张</span></div>
+  </div>
+</div>
+
+<!-- 对话 -->
+<div class="win" id="w-chat" style="left:150px;top:140px">
+  <div class="bar" data-drag><span class="sp"></span><b>咲哉 · KakaoTalk</b><button class="x" onclick="closeWin('w-chat')">✕</button></div>
+  <div class="body">
+    <div class="chat">
+      <div class="row"><div class="bb">勇志哥 你明天几点走</div></div>
+      <div class="row me"><div class="bb">下午</div></div>
+      <div class="row"><div class="bb">我送你</div></div>
+      <div class="row me"><div class="bb">好</div></div>
+      <div class="row"><div class="bb">那你还回来吗</div></div>
+      <div class="row me"><div class="bb">会。等展览的时候。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 记忆地图 -->
+<div class="win" id="w-map" style="left:140px;top:130px">
+  <div class="bar" data-drag><span class="sp"></span><b>SAKUYA × YUSHI Universe</b><button class="x" onclick="closeWin('w-map')">✕</button></div>
+  <div class="body">
+    <div class="globe">
+      <span class="pin" style="left:16%;top:24%">琦玉 · 1</span>
+      <span class="pin" style="left:52%;top:46%">东京 · 2</span>
+      <span class="pin" style="left:30%;top:66%">海边 · 1</span>
+    </div>
+    <div class="meta"><span>12 个地点 / 36 段记忆</span><span>© SAKUYA×YUSHI</span></div>
+  </div>
+</div>
+
+<!-- 留言板 -->
+<div class="win" id="w-memo" style="left:170px;top:150px">
+  <div class="bar" data-drag><span class="sp"></span><b>给他们的留言</b><button class="x" onclick="closeWin('w-memo')">✕</button></div>
+  <div class="body">
+    <ul class="mlist" id="mlist">
+      <li><b>匿名</b><span>希望你们一直这样，站在彼此旁边。</span></li>
+      <li><b>小满</b><span>第三十六张，我看了很久。</span></li>
+      <li><b>N.</b><span>下次也一起拍胶片吧。</span></li>
+    </ul>
+    <form class="memo" onsubmit="addMemo(event)">
+      <input id="memoInput" maxlength="60" placeholder="写下你想说的话…">
+      <button type="submit">发送</button>
+    </form>
+  </div>
+</div>
+
+<button class="music" id="musicBtn" onclick="toggleMusic(this)" aria-label="音乐">♪</button>
+<div class="hint">点左边的图标，打开他们的东西</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
