@@ -3,130 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SAKUYA × YUSHI — Universe</title>
+<title>SAKUYA × YUSHI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<div class="scene">
-  <div class="sky"><div class="pixels"></div>
-    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
-  </div>
-  <div class="hill"></div>
-  <div class="sphere big"></div>
-  <div class="sphere small"></div>
-  <div class="sphere tiny"></div>
-</div>
+<nav class="nav">
+  <div class="brand"><span class="p">SAKUYA</span> × <span class="b">YUSHI</span></div>
+  <ul>
+    <li><a href="#them">他们</a></li>
+    <li><a href="#dolls">娃娃</a></li>
+    <li><a href="#photos">相册</a></li>
+    <li><a href="#note">留言</a></li>
+  </ul>
+</nav>
 
-<div class="topbar">
-  <div class="brand">SAKUYA × YUSHI UNIVERSE</div>
-  <button class="back" onclick="closeAll()">返回</button>
-</div>
+<header class="hero">
+  <div class="split"><i class="l"></i><i class="r"></i></div>
+  <div class="grain"></div>
 
-<!-- 桌面图标 -->
-<div class="icons">
-  <button class="icon" onclick="openWin('w-album')">
-    <span class="gfx">📁</span>
-    <span><span class="lbl">咲哉的相册</span><br><span class="tag">OPEN</span></span>
-  </button>
-  <button class="icon" onclick="openWin('w-film')">
-    <span class="gfx a">🎞</span>
-    <span><span class="lbl">勇志的胶片</span><br><span class="tag">OPEN</span></span>
-  </button>
-  <button class="icon" onclick="openWin('w-chat')">
-    <span class="gfx b">💬</span>
-    <span><span class="lbl">两个人的对话</span><br><span class="tag">OPEN</span></span>
-  </button>
-  <button class="icon" onclick="openWin('w-map')">
-    <span class="gfx c">🌍</span>
-    <span><span class="lbl">记忆地图</span><br><span class="tag">OPEN</span></span>
-  </button>
-  <button class="icon" onclick="openWin('w-memo')">
-    <span class="gfx d">📝</span>
-    <span><span class="lbl">留言板</span><br><span class="tag">OPEN</span></span>
-  </button>
-</div>
-
-<!-- 相册 -->
-<div class="win" id="w-album" style="left:120px;top:120px">
-  <div class="bar" data-drag><span class="sp"></span><b>咲哉的相册 — 32 张</b><button class="x" onclick="closeWin('w-album')">✕</button></div>
-  <div class="body">
-    <div class="ph">
-      <img src="assets/img/s01.jpg" alt="">
-      <img src="assets/img/s03.jpg" alt="">
-      <img src="assets/img/s05.jpg" alt="">
-      <img src="assets/img/s09.jpg" alt="">
-      <img src="assets/img/s15.jpg" alt="">
-      <img src="assets/img/s16.jpg" alt="">
+  <div class="mascots">
+    <div class="m m1">
+      <div class="pig"><span class="ear l"></span><span class="ear r"></span><span class="body"></span><span class="snout"></span><span class="eye l"></span><span class="eye r"></span></div>
     </div>
-    <div class="meta"><span>胶片 · 数码 · 混合</span><span>2025 — 2026</span></div>
-  </div>
-</div>
-
-<!-- 胶片 -->
-<div class="win" id="w-film" style="left:180px;top:160px">
-  <div class="bar" data-drag><span class="sp"></span><b>勇志的胶片 — 第 36 卷</b><button class="x" onclick="closeWin('w-film')">✕</button></div>
-  <div class="body">
-    <div class="strip">
-      <figure><img src="assets/img/m01.jpg" alt=""><figcaption>01 / 樱</figcaption></figure>
-      <figure><img src="assets/img/m03.jpg" alt=""><figcaption>02 / 河</figcaption></figure>
-      <figure><img src="assets/img/m07.jpg" alt=""><figcaption>03 / 海</figcaption></figure>
-      <figure><img src="assets/img/m10.jpg" alt=""><figcaption>04 / 泉</figcaption></figure>
-      <figure><img src="assets/img/s02.jpg" alt=""><figcaption>05 / 他</figcaption></figure>
-    </div>
-    <div class="meta"><span>ISO 400 · 35mm</span><span>还剩 31 张</span></div>
-  </div>
-</div>
-
-<!-- 对话 -->
-<div class="win" id="w-chat" style="left:150px;top:140px">
-  <div class="bar" data-drag><span class="sp"></span><b>咲哉 · KakaoTalk</b><button class="x" onclick="closeWin('w-chat')">✕</button></div>
-  <div class="body">
-    <div class="chat">
-      <div class="row"><div class="bb">勇志哥 你明天几点走</div></div>
-      <div class="row me"><div class="bb">下午</div></div>
-      <div class="row"><div class="bb">我送你</div></div>
-      <div class="row me"><div class="bb">好</div></div>
-      <div class="row"><div class="bb">那你还回来吗</div></div>
-      <div class="row me"><div class="bb">会。等展览的时候。</div></div>
+    <div class="m m2">
+      <div class="cat"><span class="ear l"></span><span class="ear r"></span><span class="body"></span><span class="eye l"></span><span class="eye r"></span><span class="pearl p1"></span><span class="pearl p2"></span><span class="pearl p3"></span></div>
     </div>
   </div>
-</div>
 
-<!-- 记忆地图 -->
-<div class="win" id="w-map" style="left:140px;top:130px">
-  <div class="bar" data-drag><span class="sp"></span><b>SAKUYA × YUSHI Universe</b><button class="x" onclick="closeWin('w-map')">✕</button></div>
-  <div class="body">
-    <div class="globe">
-      <span class="pin" style="left:16%;top:24%">琦玉 · 1</span>
-      <span class="pin" style="left:52%;top:46%">东京 · 2</span>
-      <span class="pin" style="left:30%;top:66%">海边 · 1</span>
+  <div class="inner">
+    <div class="kicker">A little universe for two</div>
+    <h1 class="title"><span class="sp">SAKUYA</span> <span class="x">×</span> <span class="yu">YUSHI</span></h1>
+    <p class="sub">一个像小猪和豚鼠，一个像小猫、小狗和水獭。<br>粉色和蓝色，各自站好，又总是被拍到同一个画面里。</p>
+
+    <div class="hero-cards">
+      <figure class="tcard">
+        <img src="assets/img/sak_selfie.jpg" alt="Sakuya">
+        <figcaption class="cap"><span class="nm">SAKUYA</span><span>PINK · 11.18</span></figcaption>
+      </figure>
+      <figure class="tcard">
+        <img src="assets/img/yus_cotton.jpg" alt="Yushi">
+        <figcaption class="cap"><span class="nm">YUSHI</span><span>BLUE · 04.05</span></figcaption>
+      </figure>
     </div>
-    <div class="meta"><span>12 个地点 / 36 段记忆</span><span>© SAKUYA×YUSHI</span></div>
   </div>
-</div>
+</header>
 
-<!-- 留言板 -->
-<div class="win" id="w-memo" style="left:170px;top:150px">
-  <div class="bar" data-drag><span class="sp"></span><b>给他们的留言</b><button class="x" onclick="closeWin('w-memo')">✕</button></div>
-  <div class="body">
-    <ul class="mlist" id="mlist">
-      <li><b>匿名</b><span>希望你们一直这样，站在彼此旁边。</span></li>
-      <li><b>小满</b><span>第三十六张，我看了很久。</span></li>
-      <li><b>N.</b><span>下次也一起拍胶片吧。</span></li>
-    </ul>
-    <form class="memo" onsubmit="addMemo(event)">
-      <input id="memoInput" maxlength="60" placeholder="写下你想说的话…">
-      <button type="submit">发送</button>
-    </form>
+<section id="them">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">The two</div>
+      <h2>两个人</h2>
+      <p class="lead">一个先出声，一个先看人。放在一起的时候，画面会变得刚好。</p>
+    </div>
+
+    <div class="duo">
+      <article class="person pk rv">
+        <div class="role">Maknae · Saitama</div>
+        <h3>藤永 咲哉</h3>
+        <div class="en">SAKUYA</div>
+        <p>象征色是粉色。像小猪，也像豚鼠——脸颊鼓起来的时候尤其像。声音比人先到，笑起来眼睛先弯。</p>
+        <div class="tags"><span>粉色</span><span>小猪</span><span>豚鼠</span><span>SAKUPANG</span></div>
+        <div class="ph"><img src="assets/img/sak_summer.jpg" alt="Sakuya"></div>
+      </article>
+
+      <article class="person bl rv">
+        <div class="role">Vocal · Tokyo</div>
+        <h3>得能 勇志</h3>
+        <div class="en">YUSHI</div>
+        <p>象征色是蓝色。像小猫，也像小狗和水獭——安静的时候最像猫。话不多，但记得住。</p>
+        <div class="tags"><span>蓝色</span><span>小猫</span><span>小狗</span><span>水獭</span><span>奶茶猫</span></div>
+        <div class="ph"><img src="assets/img/yus_old.jpg" alt="Yushi"></div>
+      </article>
+    </div>
   </div>
-</div>
+</section>
 
-<button class="music" id="musicBtn" onclick="toggleMusic(this)" aria-label="音乐">♪</button>
-<div class="hint">点左边的图标，打开他们的东西</div>
+<section id="dolls">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Dolls</div>
+      <h2>他们的娃娃</h2>
+      <p class="lead">一个粉色的 SAKUPANG，一个奶油色的奶茶猫。这里先留位置，等官方图换上。</p>
+    </div>
+
+    <div class="dolls">
+      <div class="doll rv">
+        <div class="slot">娃娃图<br>待替换</div>
+        <div>
+          <small>Sakuya ver.</small>
+          <h4>SAKUPANG</h4>
+          <p>粉色的那一只，圆圆的，耳朵立在头顶。咲哉的象征。</p>
+        </div>
+      </div>
+      <div class="doll rv">
+        <div class="slot">娃娃图<br>待替换</div>
+        <div>
+          <small>Yushi ver.</small>
+          <h4>奶茶猫</h4>
+          <p>奶油色的小猫，身上有几颗珍珠。勇志的象征。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Photos</div>
+      <h2>相册</h2>
+      <p class="lead">只放数码和手机拍的（胶卷那批按你说的没用）。</p>
+    </div>
+
+    <div class="grid">
+      <figure class="rv"><img src="assets/img/sak_selfie.jpg" alt=""><figcaption>自拍 · 手机</figcaption></figure>
+      <figure class="rv"><img src="assets/img/sak_roof.jpg" alt=""><figcaption>天台 · 数码</figcaption></figure>
+      <figure class="rv"><img src="assets/img/sak_summer.jpg" alt=""><figcaption>球场 · 夏天</figcaption></figure>
+      <figure class="rv"><img src="assets/img/sak_spring.jpg" alt=""><figcaption>四月 · 含着糖</figcaption></figure>
+      <figure class="rv"><img src="assets/img/sak_winter.jpg" alt=""><figcaption>十二月 · 雪</figcaption></figure>
+      <figure class="rv"><img src="assets/img/sak_tablet.jpg" alt=""><figcaption> scripts · 店里</figcaption></figure>
+      <figure class="rv"><img src="assets/img/yus_cotton.jpg" alt=""><figcaption>生日 · 棉花糖</figcaption></figure>
+      <figure class="rv"><img src="assets/img/yus_old.jpg" alt=""><figcaption>旧照</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="note">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Messages</div>
+      <h2>留言</h2>
+    </div>
+    <div class="note-wrap">
+      <div class="note-card rv">
+        <ul id="mlist">
+          <li><b>匿名</b><span>粉色和蓝色放在一起，居然这么好看。</span></li>
+          <li><b>小满</b><span>想看重制版的那张。</span></li>
+        </ul>
+        <form onsubmit="addMemo(event)">
+          <input id="memoInput" maxlength="60" placeholder="写点什么…">
+          <button type="submit">发送</button>
+        </form>
+      </div>
+      <div class="note-card rv">
+        <p style="font-size:13px;color:#514c45">
+          这是框架版：配色、板块、照片位都已经搭好。<br><br>
+          接下来可以换娃娃的官方图、补人物资料、调整相册顺序，或者加别的板块。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>SAKUYA × YUSHI · 非官方</div>
+    <div>照片版权归原作者 · 请勿商用</div>
+  </div>
+</footer>
 
 <script src="assets/app.js"></script>
 </body>
